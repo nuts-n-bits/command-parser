@@ -72,7 +72,6 @@ export class CommandParser {
                 if (split instanceof Error) { return split; }
                 const coll = [] as ParsedCommand[];
                 for (const line of split.toks) {
-                        console.log(line);
                         const parsed = parse_one(line);
                         if (parsed instanceof Error) { return parsed; }
                         if (parsed === undefined) { continue; }
